@@ -53,7 +53,7 @@ const Navbar = () => {
           >
             T&P
           </a> */}
-          <Image src={logo} width={50} height={50} className="rounded"></Image>
+          <Image src={logo} alt="logo" width={50} height={50} className="rounded"></Image>
 
           
         </h1>

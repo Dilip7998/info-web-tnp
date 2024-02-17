@@ -4,6 +4,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const page = () => {
+
+    // useEffect(() => {
+    //     AOS.init({
+    //          duration: 800,
+    //          once: false,
+    //          offset:200
+    //        })
+    //  }, [])
     const projects=[
         {
             name:"Project1",
@@ -46,14 +54,9 @@ const page = () => {
             status:true
         }
 
-]
-useEffect(() => {
-    AOS.init({
-         duration: 800,
-         once: false,
-         offset:100
-       })
- }, [])
+] 
+
+
   return (
     <>
     <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" >
@@ -81,7 +84,7 @@ useEffect(() => {
     
 
     {projects?projects.map(({name,status,sponser})=>
-     <div data-aos="fade-right" className="p-4 py-6 mx-3 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" >
+     <div key={name} data-aos="fade-right" className="p-4 py-6 mx-3 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" >
         <div className='flex flex-wrap text-1xl justify-around sm:text-xl text-black list-none'>
         <li className='sm:w-1/2'>{name}</li>
         
